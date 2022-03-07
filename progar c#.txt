@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class t
+    {
+        public string name;
+        public int age;
+        public int id;
+        public t(string i , int y , int g)
+        {
+            this.name = i;
+            this.age = y;
+            this.id = g;
+
+        }
+        static void Main(string[] args)
+        {
+            t obj = new t("amit", 76, 89);
+            t obj1 = new t("as", 67, 88);
+            t obj23 = new t("yu", 45, 5);
+            List<t> data = new List<t>();
+            data.Add(obj);
+            data.Add(obj1);
+            data.Add(obj23);
+            foreach(t ui in data)
+            {
+                Console.WriteLine(ui.name);
+                Console.WriteLine(ui.age);
+                Console.WriteLine(ui.id);
+            }
+            Console.ReadLine();
+        }
+    }
+}
